@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel='stylesheet' href='css/fontawesome.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+            <p class="header-title">LOS SANTOS</p>
+            <p class="header-title-2">POLICE DEPARTMENT</p>
+            <div class="close">X</div>
+        </div>
+        <div class="duty-wrapper">
+            <div class="on-duty">
+                <img src="./images/duty-box.png" class="on-duty-box">
+                <p class="on-duty-text">ONDUTY</p>
+            </div>
+            <div class="off-duty">
+                <img src="./images/duty-box.png" class="off-duty-box">
+                <p class="off-duty-text">OFFDUTY</p>
+            </div>
+        </div>
+        <audio id="success-sound" preload="auto">
+            <source src="./sfx/correct.mp3"></source>
+         </audio>
+        <audio id="wrong-sound" preload="auto">
+            <source src="./sfx/wrong.mp3"></source>
+         </audio>
+    </div>
+
+
+    <script src="main.js"></script>
+
+
+</body>
+
+</html>
