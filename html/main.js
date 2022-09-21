@@ -16,11 +16,6 @@ window.addEventListener('message', function(event) {
     } else {
         $('body').fadeOut(200);
     }
-    $(".welcome-name").html(data.firstname + " " + data.lastname);
-    if (item.playerName) {
-        createPlayers()
-    }
-
 });
 
 $(".on-duty").click(function(e2) {
