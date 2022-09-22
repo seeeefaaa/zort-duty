@@ -16,24 +16,29 @@ window.addEventListener('message', function(event) {
     } else {
         $('body').fadeOut(200);
     }
+    $(".welcome-name").html(data.firstname + " " + data.lastname);
+    if (item.playerName) {
+        createPlayers()
+    }
+
 });
 
 $(".on-duty").click(function(e2) {
     success.play();
-    $.post('https://lod-duty/Mesaigir', JSON.stringify({}));
+    $.post('https://zort-duty/Mesaigir', JSON.stringify({}));
 });
 $(".off-duty").click(function(e1) {
     wrong.play();
-    $.post('https://lod-duty/Mesaicik', JSON.stringify({}));
+    $.post('https://zort-duty/Mesaicik', JSON.stringify({}));
 });
 
 $(".close").click(function(e) {
-    $.post('https://lod-duty/close', JSON.stringify({}));
+    $.post('https://zort-duty/close', JSON.stringify({}));
 
 });
 
 const createPlayers = function(filter) {
-    $.post("https://lod-duty/lod:RequestPlayers", JSON.stringify({}), function(result) {
+    $.post("https://zort-duty/lod:RequestPlayers", JSON.stringify({}), function(result) {
         if (result) {
             console.log(`${result.firstname} ${result.lastname}`)
             $('.welcome-name').text(`${result.firstname} ${result.lastname}`)
@@ -43,5 +48,5 @@ const createPlayers = function(filter) {
 
 
 $(document).ready(function() {
-    $.post('https://lod-duty/lod:loaded', JSON.stringify({}));
+    $.post('https://zort-duty/lod:loaded', JSON.stringify({}));
 });
